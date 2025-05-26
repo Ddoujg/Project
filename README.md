@@ -21,7 +21,7 @@
 
 - **train.py**  
   - Main training program  
-  *(Important: Ensure data path consistency with other scripts)*
+  *(Important: Ensure data path consistency with this file)*
 
 ## Implementation Notes
 1. Path configurations need to be consistent across:
