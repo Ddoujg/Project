@@ -57,8 +57,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # 模型定义
 #net = vgg1d().to(device)
 #net = vgg2d().to(device)
-#net = resnet18_1d().to(device)
-net = resnet18().to(device)
+net = resnet18_1d().to(device)
+#net = resnet18().to(device)
 #net = AlexNet().to(device)
 #net = AlexNet1d().to(device)
 #net = GoogLeNet().to(device)
@@ -69,8 +69,8 @@ EPOCH = 100  #遍历数据集次数
 BATCH_SIZE = 200      #批处理尺寸(batch_size)
 LR = 0.000003       #学习率  0.0000008 0.0000005 0.0000003
 # 数据包装
-trainloader = DataLoader(H5Dataset('fmd_gasf_train_dataset.h5'), batch_size=BATCH_SIZE, shuffle=True)
-testloader = DataLoader(H5Dataset('fmd_gasf_val_dataset.h5'),batch_size=BATCH_SIZE,shuffle=False,num_workers=0)
+trainloader = DataLoader(H5Dataset('origin_train_dataset.h5'), batch_size=BATCH_SIZE, shuffle=True)
+testloader = DataLoader(H5Dataset('origin_val_dataset.h5'),batch_size=BATCH_SIZE,shuffle=False,num_workers=0)
 
 L1 = len(trainloader)
 L2 = len(testloader)
