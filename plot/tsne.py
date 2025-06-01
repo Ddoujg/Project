@@ -15,7 +15,7 @@ def h5():
 # 0. 基础配置（根据实际情况修改路径和参数）
 # ====================================================
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-h5_path = 'C://Users//zh//Desktop//train//gasf_val_dataset.h5'
+h5_path = 'C://Users//zh//Desktop//train//origin_val_dataset.h5'
 batch_size = 200                      # 特征提取的批大小
 # ====================================================
 # 1. 直接导入训练时的模型定义（关键步骤！）
@@ -29,15 +29,15 @@ from alexnet1d import AlexNet1d
 from googlenet import GoogLeNet
 from googlenet1d import GoogLeNet1d
 
-#model = resnet18_1d()  # 初始化模型
-model = resnet18()
+model = resnet18_1d()  # 初始化模型
+#model = resnet18()
 #model = vgg1d().to(device)
 #model = vgg2d().to(device)
 #model = AlexNet().to(device)
 #model = AlexNet1d().to(device)
 #model = GoogLeNet().to(device)
 #model = GoogLeNet1d().to(device)
-model.load_state_dict(torch.load('C://Users//zh//Desktop//train//resnet//gasf//net.pth'))  # 加载权重
+model.load_state_dict(torch.load('C://Users//zh//Desktop//train//resnet//origin//net.pth'))  # 加载权重
 
 
 # ====================================================
