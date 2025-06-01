@@ -6,6 +6,9 @@
   - Contains data processing code  
   *(Note: Requires modification of original data path)*
 
+- **example folder**
+  - Sample data and weight files (origin method)
+    
 - **FMD_code/**  
   - Contains MATLAB code for FMD method
 
