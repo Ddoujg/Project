@@ -57,7 +57,7 @@ BATCH_SIZE = 200
 
 # 加载测试数据
 testloader = DataLoader(
-    H5Dataset('C://Users//zh//Desktop//train//origin_val_dataset.h5'),
+    H5Dataset('origin_val_dataset.h5'),
     BATCH_SIZE,
     shuffle=False,
     num_workers=0
@@ -65,7 +65,7 @@ testloader = DataLoader(
 
 # 加载模型权重（自动处理设备映射）
 net.load_state_dict(torch.load(
-    'C://Users//zh//Desktop//train//resnet//origin//net.pth',
+    'net.pth',
     map_location=device  # 添加设备映射
 ))
 
